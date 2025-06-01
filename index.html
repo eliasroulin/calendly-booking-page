@@ -2,35 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Book an Interview</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h1>Schedule Your Interview</h1>
-    <form id="booking-form">
-      <label for="name">Name:</label>
-      <input type="text" id="name" required />
+    <div class="left-panel">
+      <img src="https://via.placeholder.com/100" alt="Profile Picture" class="profile-pic">
+      <h2>Reggie Peterson</h2>
+      <p>30 Minute Interview</p>
+      <p><strong>Duration:</strong> 30 min</p>
+    </div>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" required />
+    <div class="middle-panel">
+      <h2>Select a Date & Time</h2>
+      <div class="calendar" id="calendar"></div>
+      <div class="timeslots" id="timeslots"></div>
+    </div>
 
-      <label for="slot">Available Time Slots:</label>
-      <select id="slot" required>
-        <option value="">--Select a Time Slot--</option>
-        <option>Monday 10:00 AM</option>
-        <option>Tuesday 2:00 PM</option>
-        <option>Wednesday 4:00 PM</option>
-        <!-- Add more slots as needed -->
-      </select>
-
-      <button type="submit">Book Now</button>
-    </form>
-    <div id="confirmation" class="hidden">
-      <p>Thank you for booking! We look forward to speaking with you.</p>
+    <div class="right-panel" id="summary">
+      <h2>Your Selection</h2>
+      <p id="selected-info">No slot selected yet.</p>
     </div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
